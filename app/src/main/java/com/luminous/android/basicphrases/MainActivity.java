@@ -3,6 +3,7 @@ package com.luminous.android.basicphrases;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Debug;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,27 +17,35 @@ public class MainActivity extends AppCompatActivity {
     public void buttonClicked(View view) {
         switch (view.getId()) {
             case R.id.button:
+                System.out.println(1);
                 break;
 
             case R.id.button2:
+                System.out.println(2);
                 break;
 
             case R.id.button3:
+                System.out.println(3);
                 break;
 
             case R.id.button4:
+                System.out.println(4);
                 break;
 
             case R.id.button5:
+                System.out.println(5);
                 break;
 
             case R.id.button6:
+                System.out.println(6);
                 break;
 
             case R.id.button7:
+                System.out.println(7);
                 break;
 
             case R.id.button8:
+                System.out.println(8);
                 break;
         }
     }
