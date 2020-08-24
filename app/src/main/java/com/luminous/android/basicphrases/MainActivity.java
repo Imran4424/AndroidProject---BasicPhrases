@@ -2,22 +2,45 @@ package com.luminous.android.basicphrases;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Debug;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
     private List<Button> buttons;
+    private  List<String> buttonTitles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String[] titles = getResources().getStringArray(R.array.buttonTitle);
+        buttonTitles = Arrays.asList(titles);
+
+        initButtons();
+    }
+
+    private void initButtons() {
+
+
+        for (int i = 1; i <= 8; i++) {
+            String buttonId = "button";
+            buttonId = buttonId + i;
+            Log.d("1", buttonId);
+            int bidTemp = getResources().getIdentifier(buttonId, "id", getPackageName());
+            System.out.println(bidTemp);
+            buttons.add((Button) findViewById(bidTemp));
+            buttons.get(i - 1).setText(buttonTitles.get(i - 1));
+        }
     }
 
     public void buttonClicked(View view) {
