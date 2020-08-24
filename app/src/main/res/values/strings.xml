@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Basic Phrases</string>
+
+
+    <string-array name="buttonTitle">
+        <item>Do you speak english?</item>
+        <item>Good Evening</item>
+        <item>Hello</item>
+        <item>How are you?</item>
+        <item>I live in Rangpur</item>
+        <item>My name is Shaira</item>
+        <item>Please</item>
+        <item>Welcome</item>
+    </string-array>
 </resources>
