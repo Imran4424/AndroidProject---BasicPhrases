@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonClicked(View view) {
+        mediaPlayer.stop();
+
         switch (view.getId()) {
             case R.id.button1:
                 mediaPlayer = MediaPlayer.create(this, R.raw.doyouspeakenglish);
