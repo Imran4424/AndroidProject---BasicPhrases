@@ -1,11 +1,14 @@
 package com.luminous.android.basicphrases;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonClicked(View view) {
         switch (view.getId()) {
-            case R.id.button:
+            case R.id.button1:
                 System.out.println(1);
                 break;
 
