@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mediaPlayer = MediaPlayer.create(this, R.raw.doyouspeakenglish);
+
         initButtons();
     }
 
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonClicked(View view) {
         mediaPlayer.stop();
+
+//        mediaPlayer = MediaPlayer.create(this, getResources().getIdentifier(view.getTag().toString(), "raw", getPackageName()));
 
         switch (view.getId()) {
             case R.id.button1:
