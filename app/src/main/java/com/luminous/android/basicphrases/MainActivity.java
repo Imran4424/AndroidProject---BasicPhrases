@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.button7:
-                mediaPlayer = MediaPlayer.create(this, R.raw.doyouspeakenglish);
+                mediaPlayer = MediaPlayer.create(this, R.raw.please);
                 mediaPlayer.start();
                 break;
 
