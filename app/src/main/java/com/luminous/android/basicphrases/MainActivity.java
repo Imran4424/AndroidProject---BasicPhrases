@@ -17,6 +17,16 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
     private List<Button> buttons;
     private  List<String> buttonTitles;
+    private int[] buttonIds = {
+            R.id.button1,
+            R.id.button2,
+            R.id.button3,
+            R.id.button4,
+            R.id.button5,
+            R.id.button6,
+            R.id.button7,
+            R.id.button8
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
