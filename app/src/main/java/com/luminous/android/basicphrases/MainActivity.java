@@ -15,8 +15,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
-    private List<Button> buttons;
-    private  List<String> buttonTitles;
     private int[] buttonIds = {
             R.id.button1,
             R.id.button2,
@@ -33,42 +31,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] titles = getResources().getStringArray(R.array.buttonTitle);
-        buttonTitles = Arrays.asList(titles);
-
         initButtons();
     }
 
     private void initButtons() {
+        String[] titles = getResources().getStringArray(R.array.buttonTitle);
+        List<String> buttonTitles = Arrays.asList(titles);
 
-
-        for (int i = 1; i <= 8; i++) {
-            String buttonId = "button";
-            buttonId = buttonId + i;
-            Log.d("1", buttonId);
-            int bidTemp = getResources().getIdentifier(buttonId, "id", getPackageName());
-            System.out.println(bidTemp);
-            buttons.add((Button) findViewById(bidTemp));
-            buttons.get(i - 1).setText(buttonTitles.get(i - 1));
+        for (int i = 0; i < buttonIds.length; i++) {
+            ((Button)findViewById(buttonIds[i])).setText(buttonTitles.get(i));
         }
     }
 
     public void buttonClicked(View view) {
         switch (view.getId()) {
             case R.id.button1:
-                System.out.println(1);
+                mediaPlayer = MediaPlayer.create(this, R.raw.doyouspeakenglish);
+                mediaPlayer.start();
                 break;
 
             case R.id.button2:
-                System.out.println(2);
+                mediaPlayer = MediaPlayer.create(this, R.raw.goodevening);
+                mediaPlayer.start();
                 break;
 
             case R.id.button3:
-                System.out.println(3);
+                mediaPlayer = MediaPlayer.create(this, R.raw.hello);
+                mediaPlayer.start();
                 break;
 
             case R.id.button4:
-                System.out.println(4);
+                mediaPlayer = MediaPlayer.create(this, R.raw.);
+                mediaPlayer.start();
                 break;
 
             case R.id.button5:
