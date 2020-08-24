@@ -3,12 +3,16 @@ package com.luminous.android.basicphrases;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
+    private List<Button> buttons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
