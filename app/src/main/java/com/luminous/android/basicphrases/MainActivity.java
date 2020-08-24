@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonClicked(View view) {
         mediaPlayer.stop();
-
+//        another way
 //        mediaPlayer = MediaPlayer.create(this, getResources().getIdentifier(view.getTag().toString(), "raw", getPackageName()));
 
         switch (view.getId()) {
